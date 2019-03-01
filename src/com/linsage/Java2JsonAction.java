@@ -78,9 +78,9 @@ public class Java2JsonAction extends AnAction {
                 String name = field.getName();
 
                 //doc comment
-                if (field.getDocComment() != null && field.getDocComment().getText() != null) {
+               /* if (field.getDocComment() != null && field.getDocComment().getText() != null) {
                     commentKV.set(name, field.getDocComment().getText());
-                }
+                }*/
 
                 if (type instanceof PsiPrimitiveType) {       //primitive Type
                     kv.set(name, PsiTypesUtil.getDefaultValue(type));
@@ -118,9 +118,9 @@ public class Java2JsonAction extends AnAction {
                 }
             }
 
-            if (commentKV.size() > 0) {
+           /* if (commentKV.size() > 0) {
                 kv.set("@comment", commentKV);
-            }
+            }*/
         }
 
         return kv;
